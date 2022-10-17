@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Copy Instapaper Highlights",
+  "description": "Copy highlights on an Instapaper page",
+  "version": "1.0",
+
+  "content_scripts": [ {
+      "all_frames" : false,
+      "js": [ "js/app.js" ],
+      "matches": [ "https://www.instapaper.com/read/*", "http://www.instapaper.com/read/*" ],
+      "run_at": "document_end"
+   } ],
+  "permissions": [
+    "activeTab",
+    "http://www.instapaper.com/*",
+    "https://www.instapaper.com/*"    
+  ]
+}
